@@ -7,26 +7,26 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.5.20-1 (>=20060604)
-  glib2-2.10.2-1
-  libX11_6-1.0.0-2
-  libXft2-2.1.8.2-1
+  cygwin-1.5.21-2
+  glib2-2.10.3-1
+  libX11_6-1.0.2-1
+  libXft2-2.1.9-1
   libcairo2-1.0.4-1
-  libfontconfig1-2.2.2-1
+  libfontconfig1-2.3.2-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1 (>=20060604)
+  cygwin-1.5.21-2
   autoconf2.5-2.59-2
   automake1.9-1.9.6-1
-  binutils-20050610-1
+  binutils-20060709-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   gtk-doc-1.5-1
   libtool1.5-1.5.22-1
-  make-3.80-1
+  make-3.81-1
   pkg-config-0.20-1
-  sed-4.1.4-1
+  sed-4.1.5-1
   w32api-3.7-1
 
 Canonical website:
@@ -47,6 +47,8 @@ Build instructions:
 This will create:
   /usr/src/pango-1.12.3-X-src.tar.bz2
   /usr/src/pango-1.12.3-X.tar.bz2
+  /usr/src/pango-devel-1.12.3-X.tar.bz2
+  /usr/src/pango-doc-1.12.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -193,6 +195,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 1.12.4-1 -----
+Version bump.  Build patches included upstream.
 
 ----- version 1.12.3-1 -----
 Version bump.

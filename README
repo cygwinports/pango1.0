@@ -8,22 +8,23 @@ and font handling for GTK+-2.x.
 
 Runtime requirements:
   cygwin-1.5.21-2
-  glib2-2.10.3-1
-  libX11_6-1.0.2-1
+  glib2-2.12.4-1
+  libX11_6-1.0.3-1
   libXft2-2.1.9-1
-  libcairo2-1.0.4-1
-  libfontconfig1-2.3.2-1
+  libcairo2-1.2.4-1
+  libfontconfig1-2.4.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
   cygwin-1.5.21-2
-  autoconf2.5-2.59-2
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  binutils-20060709-1
+  binutils-20060817-1
+  cygport-0.2.6-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
-  gtk-doc-1.5-1
-  libtool1.5-1.5.22-1
+  gtk-doc-1.7-1
+  libtool1.5-1.5.23a-1
   make-3.81-1
   pkg-config-0.20-1
   sed-4.1.5-1
@@ -38,22 +39,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango-1.12.3-X-src.tar.bz2
+  unpack pango-1.14.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango-1.12.3-X.cygport all
+  cygport ./pango-1.14.7-X.cygport all
 
 This will create:
-  /usr/src/pango-1.12.3-X-src.tar.bz2
-  /usr/src/pango-1.12.3-X.tar.bz2
-  /usr/src/pango-devel-1.12.3-X.tar.bz2
-  /usr/src/pango-doc-1.12.3-X.tar.bz2
+  /usr/src/pango-1.14.7-X-src.tar.bz2
+  /usr/src/pango-1.14.7-X.tar.bz2
+  /usr/src/pango-devel-1.14.7-X.tar.bz2
+  /usr/src/pango-doc-1.14.7-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the main package:
+Files included in the binary packages:
 
+(pango)
   /etc/pango/pangox.aliases
   /etc/postinstall/pango.sh
   /usr/bin/cygpango-1.0-0.dll
@@ -66,6 +68,8 @@ Files included in the main package:
   /usr/bin/pango-view.exe
   /usr/lib/pango/1.5.0/modules/pango-arabic-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-arabic-fc.la
+  /usr/lib/pango/1.5.0/modules/pango-arabic-lang.dll
+  /usr/lib/pango/1.5.0/modules/pango-arabic-lang.la
   /usr/lib/pango/1.5.0/modules/pango-basic-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-basic-fc.la
   /usr/lib/pango/1.5.0/modules/pango-basic-win32.dll
@@ -78,6 +82,8 @@ Files included in the main package:
   /usr/lib/pango/1.5.0/modules/pango-hebrew-fc.la
   /usr/lib/pango/1.5.0/modules/pango-indic-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-indic-fc.la
+  /usr/lib/pango/1.5.0/modules/pango-indic-lang.dll
+  /usr/lib/pango/1.5.0/modules/pango-indic-lang.la
   /usr/lib/pango/1.5.0/modules/pango-khmer-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-khmer-fc.la
   /usr/lib/pango/1.5.0/modules/pango-syriac-fc.dll
@@ -86,20 +92,19 @@ Files included in the main package:
   /usr/lib/pango/1.5.0/modules/pango-thai-fc.la
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/Cygwin/pango-1.12.3.README
-  /usr/share/doc/pango-1.12.3/AUTHORS
-  /usr/share/doc/pango-1.12.3/COPYING
-  /usr/share/doc/pango-1.12.3/ChangeLog
-  /usr/share/doc/pango-1.12.3/HACKING
-  /usr/share/doc/pango-1.12.3/INSTALL
-  /usr/share/doc/pango-1.12.3/MAINTAINERS
-  /usr/share/doc/pango-1.12.3/NEWS
-  /usr/share/doc/pango-1.12.3/README
-  /usr/share/doc/pango-1.12.3/THANKS
+  /usr/share/doc/Cygwin/pango-1.14.7.README
+  /usr/share/doc/pango-1.14.7/AUTHORS
+  /usr/share/doc/pango-1.14.7/COPYING
+  /usr/share/doc/pango-1.14.7/ChangeLog
+  /usr/share/doc/pango-1.14.7/HACKING
+  /usr/share/doc/pango-1.14.7/INSTALL
+  /usr/share/doc/pango-1.14.7/MAINTAINERS
+  /usr/share/doc/pango-1.14.7/NEWS
+  /usr/share/doc/pango-1.14.7/README
+  /usr/share/doc/pango-1.14.7/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
-Files included in the devel package:
-
+(pango-devel)
   /usr/include/pango-1.0/pango/pango-attributes.h
   /usr/include/pango-1.0/pango/pango-break.h
   /usr/include/pango-1.0/pango/pango-context.h
@@ -149,8 +154,7 @@ Files included in the devel package:
   /usr/lib/pkgconfig/pangox.pc
   /usr/lib/pkgconfig/pangoxft.pc
 
-Files included in the doc package:
-
+(pango-doc)
   /usr/share/gtk-doc/html/pango/PangoEngineLang.html
   /usr/share/gtk-doc/html/pango/PangoEngineShape.html
   /usr/share/gtk-doc/html/pango/PangoFcDecoder.html
@@ -161,6 +165,14 @@ Files included in the doc package:
   /usr/share/gtk-doc/html/pango/index.html
   /usr/share/gtk-doc/html/pango/index.sgml
   /usr/share/gtk-doc/html/pango/ix01.html
+  /usr/share/gtk-doc/html/pango/ix02.html
+  /usr/share/gtk-doc/html/pango/ix03.html
+  /usr/share/gtk-doc/html/pango/ix04.html
+  /usr/share/gtk-doc/html/pango/ix05.html
+  /usr/share/gtk-doc/html/pango/ix06.html
+  /usr/share/gtk-doc/html/pango/ix07.html
+  /usr/share/gtk-doc/html/pango/ix08.html
+  /usr/share/gtk-doc/html/pango/ix09.html
   /usr/share/gtk-doc/html/pango/layout.gif
   /usr/share/gtk-doc/html/pango/left.png
   /usr/share/gtk-doc/html/pango/lowlevel.html
@@ -172,8 +184,10 @@ Files included in the doc package:
   /usr/share/gtk-doc/html/pango/pango-FreeType-Fonts-and-Rendering.html
   /usr/share/gtk-doc/html/pango/pango-Glyph-Storage.html
   /usr/share/gtk-doc/html/pango/pango-Layout-Objects.html
+  /usr/share/gtk-doc/html/pango/pango-Miscellaneous-Utilities.html
   /usr/share/gtk-doc/html/pango/pango-Modules.html
   /usr/share/gtk-doc/html/pango/pango-OpenType-Font-Handling.html
+  /usr/share/gtk-doc/html/pango/pango-PangoRenderer.html
   /usr/share/gtk-doc/html/pango/pango-Scripts.html
   /usr/share/gtk-doc/html/pango/pango-Tab-Stops.html
   /usr/share/gtk-doc/html/pango/pango-Text-Attributes.html
@@ -195,6 +209,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 1.14.7-1 -----
+Version bump for GNOME 2.16.
 
 ----- version 1.12.4-1 -----
 Version bump.  Build patches included upstream.

@@ -7,16 +7,16 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.5.21-2
+  cygwin-1.5.22-1
   glib2-2.12.4-1
   libX11_6-1.0.3-1
   libXft2-2.1.9-1
   libcairo2-1.2.4-1
-  libfontconfig1-2.4.1-1
+  libfontconfig1-2.4.1-4
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-2
+  cygwin-1.5.22-1
   autoconf2.5-2.60-1
   automake1.9-1.9.6-1
   binutils-20060817-1
@@ -39,17 +39,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango-1.14.7-X-src.tar.bz2
+  unpack pango-1.14.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango-1.14.7-X.cygport all
+  cygport ./pango-1.14.8-X.cygport all
 
 This will create:
-  /usr/src/pango-1.14.7-X-src.tar.bz2
-  /usr/src/pango-1.14.7-X.tar.bz2
-  /usr/src/pango-devel-1.14.7-X.tar.bz2
-  /usr/src/pango-doc-1.14.7-X.tar.bz2
+  /usr/src/pango-1.14.8-X-src.tar.bz2
+  /usr/src/pango-1.14.8-X.tar.bz2
+  /usr/src/pango-devel-1.14.8-X.tar.bz2
+  /usr/src/pango-doc-1.14.8-X.tar.bz2
 
 -------------------------------------------
 
@@ -92,16 +92,16 @@ Files included in the binary packages:
   /usr/lib/pango/1.5.0/modules/pango-thai-fc.la
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/Cygwin/pango-1.14.7.README
-  /usr/share/doc/pango-1.14.7/AUTHORS
-  /usr/share/doc/pango-1.14.7/COPYING
-  /usr/share/doc/pango-1.14.7/ChangeLog
-  /usr/share/doc/pango-1.14.7/HACKING
-  /usr/share/doc/pango-1.14.7/INSTALL
-  /usr/share/doc/pango-1.14.7/MAINTAINERS
-  /usr/share/doc/pango-1.14.7/NEWS
-  /usr/share/doc/pango-1.14.7/README
-  /usr/share/doc/pango-1.14.7/THANKS
+  /usr/share/doc/Cygwin/pango-1.14.8.README
+  /usr/share/doc/pango-1.14.8/AUTHORS
+  /usr/share/doc/pango-1.14.8/COPYING
+  /usr/share/doc/pango-1.14.8/ChangeLog
+  /usr/share/doc/pango-1.14.8/HACKING
+  /usr/share/doc/pango-1.14.8/INSTALL
+  /usr/share/doc/pango-1.14.8/MAINTAINERS
+  /usr/share/doc/pango-1.14.8/NEWS
+  /usr/share/doc/pango-1.14.8/README
+  /usr/share/doc/pango-1.14.8/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
 (pango-devel)
@@ -209,6 +209,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.14.8-1 -----
+Version bump.
 
 ----- version 1.14.7-1 -----
 Version bump for GNOME 2.16.

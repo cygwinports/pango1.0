@@ -7,26 +7,27 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  glib2-2.12.4-1
-  libX11_6-1.0.3-1
+  cygwin-1.5.23-2
+  glib2-2.12.7-1
+  libX11_6-1.1.1-1
   libXft2-2.1.11-1
   libcairo2-1.2.6-1
   libfontconfig1-2.3.2-2
+  libthai0-0.1.7-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
+  cygwin-1.5.23-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.7-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
+  cygport-0.2.9-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
   gtk-doc-1.7-1
-  libtool1.5-1.5.23a-1
+  libtool1.5-1.5.23a-2
   make-3.81-1
-  pkg-config-0.20-1
+  pkg-config-0.21-1
   sed-4.1.5-2
   w32api-3.7-1
 
@@ -39,17 +40,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango-1.14.9-X-src.tar.bz2
+  unpack pango-1.14.10-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango-1.14.9-X.cygport all
+  cygport ./pango-1.14.10-X.cygport all
 
 This will create:
-  /usr/src/pango-1.14.9-X-src.tar.bz2
-  /usr/src/pango-1.14.9-X.tar.bz2
-  /usr/src/pango-devel-1.14.9-X.tar.bz2
-  /usr/src/pango-doc-1.14.9-X.tar.bz2
+  /usr/src/pango-1.14.10-X-src.tar.bz2
+  /usr/src/pango-1.14.10-X.tar.bz2
+  /usr/src/pango-devel-1.14.10-X.tar.bz2
+  /usr/src/pango-doc-1.14.10-X.tar.bz2
 
 -------------------------------------------
 
@@ -90,18 +91,20 @@ Files included in the binary packages:
   /usr/lib/pango/1.5.0/modules/pango-syriac-fc.la
   /usr/lib/pango/1.5.0/modules/pango-thai-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-thai-fc.la
+  /usr/lib/pango/1.5.0/modules/pango-thai-lang.dll
+  /usr/lib/pango/1.5.0/modules/pango-thai-lang.la
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.5.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/Cygwin/pango-1.14.9.README
-  /usr/share/doc/pango-1.14.9/AUTHORS
-  /usr/share/doc/pango-1.14.9/COPYING
-  /usr/share/doc/pango-1.14.9/ChangeLog
-  /usr/share/doc/pango-1.14.9/HACKING
-  /usr/share/doc/pango-1.14.9/INSTALL
-  /usr/share/doc/pango-1.14.9/MAINTAINERS
-  /usr/share/doc/pango-1.14.9/NEWS
-  /usr/share/doc/pango-1.14.9/README
-  /usr/share/doc/pango-1.14.9/THANKS
+  /usr/share/doc/Cygwin/pango-1.14.10.README
+  /usr/share/doc/pango-1.14.10/AUTHORS
+  /usr/share/doc/pango-1.14.10/COPYING
+  /usr/share/doc/pango-1.14.10/ChangeLog
+  /usr/share/doc/pango-1.14.10/HACKING
+  /usr/share/doc/pango-1.14.10/INSTALL
+  /usr/share/doc/pango-1.14.10/MAINTAINERS
+  /usr/share/doc/pango-1.14.10/NEWS
+  /usr/share/doc/pango-1.14.10/README
+  /usr/share/doc/pango-1.14.10/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
 (pango-devel)
@@ -209,6 +212,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.14.10-1 -----
+Version bump with libthai support.
 
 ----- version 1.14.9-1 -----
 Version bump.

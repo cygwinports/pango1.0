@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin glib2 libX11_6 libXft2 libcairo2 libfontconfig1
+requires: cygwin glib2 libX11_6 libXft2 libcairo2 libfontconfig1 libthai0
 sdesc: "GNOME text layout and rendering library (runtime)"
 ldesc: "Pango is a library for layout and rendering of text, with an emphasis
 on internationalization. Pango can be used anywhere that text layout

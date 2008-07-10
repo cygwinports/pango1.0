@@ -7,29 +7,29 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.5.25-11
+  cygwin-1.5.25-15
   glib2-2.16.3-1
+  libcairo2-1.6.4-1
+  libfontconfig1-2.6.0-1
+  libfreetype26-2.3.7-1
+  libthai0-0.1.9-1
   libX11_6-1.1.3-1
   libXft2-2.1.12-1
   libXrender1-0.9.4-1
-  libcairo2-1.6.4-1
-  libfontconfig1-2.3.2-2
-  libfreetype26-2.3.5-1
-  libthai0-0.1.9-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
   binutils-20060817-1
-  cygport-0.3.11-1
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gnome-common-2.20.0-2
   gtk-doc-1.10-1
   libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
   w32api-3.11-1
 
@@ -42,16 +42,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango-1.20.3-X-src.tar.bz2
+  unpack pango-1.20.5-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango-1.20.3-X.cygport all
+  cygport ./pango-1.20.5-X.cygport all
 
 This will create:
-  /usr/src/pango-1.20.3-X-src.tar.bz2
-  /usr/src/pango-1.20.3-X.tar.bz2
-  /usr/src/pango-devel-1.20.3-X.tar.bz2
+  /usr/src/pango-1.20.5-X-src.tar.bz2
+  /usr/src/pango-1.20.5-X.tar.bz2
+  /usr/src/pango-devel-1.20.5-X.tar.bz2
 
 -------------------------------------------
 
@@ -96,15 +96,15 @@ Files included in the binary packages:
   /usr/lib/pango/1.6.0/modules/pango-thai-lang.la
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/pango-1.20.3/AUTHORS
-  /usr/share/doc/pango-1.20.3/COPYING
-  /usr/share/doc/pango-1.20.3/ChangeLog
-  /usr/share/doc/pango-1.20.3/HACKING
-  /usr/share/doc/pango-1.20.3/INSTALL
-  /usr/share/doc/pango-1.20.3/MAINTAINERS
-  /usr/share/doc/pango-1.20.3/NEWS
-  /usr/share/doc/pango-1.20.3/README
-  /usr/share/doc/pango-1.20.3/THANKS
+  /usr/share/doc/pango-1.20.5/AUTHORS
+  /usr/share/doc/pango-1.20.5/COPYING
+  /usr/share/doc/pango-1.20.5/ChangeLog
+  /usr/share/doc/pango-1.20.5/HACKING
+  /usr/share/doc/pango-1.20.5/INSTALL
+  /usr/share/doc/pango-1.20.5/MAINTAINERS
+  /usr/share/doc/pango-1.20.5/NEWS
+  /usr/share/doc/pango-1.20.5/README
+  /usr/share/doc/pango-1.20.5/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
 (pango-devel)
@@ -219,6 +219,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.20.5-1 -----
+Version bump.
 
 ----- version 1.20.3-1 -----
 Version bump for GNOME 2.22.

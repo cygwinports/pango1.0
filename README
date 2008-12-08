@@ -8,7 +8,7 @@ and font handling for GTK+-2.x.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libglib2.0-2.18.3-1
+  libglib2.0_0-2.18.3-1
   libcairo2-1.8.4-1
   libfontconfig1-2.6.0-1
   libfreetype26-2.3.7-1
@@ -48,7 +48,7 @@ Build instructions:
   cygport ./pango1.0-1.22.3-X.cygport all
 
 This will create:
-  /usr/src/libpango1.0-1.22.3-X.tar.bz2
+  /usr/src/libpango1.0_0-1.22.3-X.tar.bz2
   /usr/src/libpango1.0-devel-1.22.3-X.tar.bz2
   /usr/src/pango1.0-1.22.3-X-src.tar.bz2
 
@@ -56,7 +56,7 @@ This will create:
 
 Files included in the binary packages:
 
-(libpango1.0)
+(libpango1.0_0)
   /etc/pango/pangox.aliases
   /etc/postinstall/pango1.0.sh
   /usr/bin/cygpango-1.0-0.dll

@@ -9,7 +9,7 @@ and font handling for GTK+-2.x.
 Runtime requirements:
   cygwin-1.5.25-15
   libglib2.0_0-2.18.3-1
-  libcairo2-1.8.4-1
+  libcairo2-1.8.6-1
   libfontconfig1-2.6.0-1
   libfreetype26-2.3.7-1
   libX11_6-1.1.5-1
@@ -21,7 +21,7 @@ Build requirements:
   autoconf2.5-2.63-1
   automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gnome-common-2.24.0-1
@@ -30,7 +30,7 @@ Build requirements:
   make-3.81-1
   pkg-config-0.23a-2
   sed-4.1.5-2
-  w32api-3.11-1
+  w32api-3.12-1
 
 Canonical website:
   http://www.pango.org/
@@ -41,16 +41,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango1.0-1.22.3-X-src.tar.bz2
+  unpack pango1.0-1.22.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango1.0-1.22.3-X.cygport all
+  cygport ./pango1.0-1.22.4-X.cygport all
 
 This will create:
-  /usr/src/libpango1.0_0-1.22.3-X.tar.bz2
-  /usr/src/libpango1.0-devel-1.22.3-X.tar.bz2
-  /usr/src/pango1.0-1.22.3-X-src.tar.bz2
+  /usr/src/libpango1.0_0-1.22.4-X.tar.bz2
+  /usr/src/libpango1.0-devel-1.22.4-X.tar.bz2
+  /usr/src/pango1.0-1.22.4-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -93,15 +93,15 @@ Files included in the binary packages:
   /usr/lib/pango/1.6.0/modules/pango-thai-fc.la
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/pango1.0-1.22.3/AUTHORS
-  /usr/share/doc/pango1.0-1.22.3/COPYING
-  /usr/share/doc/pango1.0-1.22.3/ChangeLog
-  /usr/share/doc/pango1.0-1.22.3/HACKING
-  /usr/share/doc/pango1.0-1.22.3/INSTALL
-  /usr/share/doc/pango1.0-1.22.3/MAINTAINERS
-  /usr/share/doc/pango1.0-1.22.3/NEWS
-  /usr/share/doc/pango1.0-1.22.3/README
-  /usr/share/doc/pango1.0-1.22.3/THANKS
+  /usr/share/doc/pango1.0-1.22.4/AUTHORS
+  /usr/share/doc/pango1.0-1.22.4/COPYING
+  /usr/share/doc/pango1.0-1.22.4/ChangeLog
+  /usr/share/doc/pango1.0-1.22.4/HACKING
+  /usr/share/doc/pango1.0-1.22.4/INSTALL
+  /usr/share/doc/pango1.0-1.22.4/MAINTAINERS
+  /usr/share/doc/pango1.0-1.22.4/NEWS
+  /usr/share/doc/pango1.0-1.22.4/README
+  /usr/share/doc/pango1.0-1.22.4/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
 (libpango1.0-devel)
@@ -220,6 +220,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.22.4-1 -----
+Version bump.
 
 ----- version 1.22.3-1 -----
 Version bump for GNOME 2.24.

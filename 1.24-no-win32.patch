@@ -1,0 +1,11 @@
+--- origsrc/pango-1.24.0/configure.in	2009-03-16 18:41:13.859375000 -0500
++++ src/pango-1.24.0/configure.in	2009-03-16 19:05:49.000000000 -0500
+@@ -274,7 +274,7 @@ WIN32_CFLAGS=""
+ # The following doesn't work with autoconf-2.13, so we check $host instead
+ # AC_CHECK_LIB(gdi32, GetTextMetricsA@8, have_win32=true, : )
+ case "$host" in
+-  *-*-mingw*|*-*-cygwin*) have_win32=true ;;
++  *-*-mingw*) have_win32=true ;;
+ esac
+ 
+ 

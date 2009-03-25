@@ -7,30 +7,31 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libglib2.0_0-2.18.3-1
-  libcairo2-1.8.6-1
-  libfontconfig1-2.6.0-1
-  libfreetype26-2.3.7-1
-  libX11_6-1.1.5-1
-  libXft2-2.1.13-1
-  libXrender1-0.9.4-2
+  cygwin-1.7.0-44
+  libcairo2-1.8.6-10
+  libfontconfig1-2.6.0-10
+  libfreetype6-2.3.9-1
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.0-1
+  libX11_6-1.2-10
+  libXft2-2.1.13-10
+  libXrender1-0.9.4-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.24.0-1
-  gtk-doc-1.11-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  gtk-doc-1.11-2
+  help2man-1.36.4-10
   libtool-2.2.6a-1
-  make-3.81-1
+  make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
-  w32api-3.12-1
 
 Canonical website:
   http://www.pango.org/
@@ -41,16 +42,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango1.0-1.22.4-X-src.tar.bz2
+  unpack pango1.0-1.24.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango1.0-1.22.4-X.cygport all
+  cygport ./pango1.0-1.24.0-X.cygport all
 
 This will create:
-  /usr/src/libpango1.0_0-1.22.4-X.tar.bz2
-  /usr/src/libpango1.0-devel-1.22.4-X.tar.bz2
-  /usr/src/pango1.0-1.22.4-X-src.tar.bz2
+  /usr/src/libpango1.0_0-1.24.0-X.tar.bz2
+  /usr/src/libpango1.0-devel-1.24.0-X.tar.bz2
+  /usr/src/pango1.0-1.24.0-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -62,7 +63,6 @@ Files included in the binary packages:
   /usr/bin/cygpango-1.0-0.dll
   /usr/bin/cygpangocairo-1.0-0.dll
   /usr/bin/cygpangoft2-1.0-0.dll
-  /usr/bin/cygpangowin32-1.0-0.dll
   /usr/bin/cygpangox-1.0-0.dll
   /usr/bin/cygpangoxft-1.0-0.dll
   /usr/bin/pango-querymodules.exe
@@ -73,8 +73,6 @@ Files included in the binary packages:
   /usr/lib/pango/1.6.0/modules/pango-arabic-lang.la
   /usr/lib/pango/1.6.0/modules/pango-basic-fc.dll
   /usr/lib/pango/1.6.0/modules/pango-basic-fc.la
-  /usr/lib/pango/1.6.0/modules/pango-basic-win32.dll
-  /usr/lib/pango/1.6.0/modules/pango-basic-win32.la
   /usr/lib/pango/1.6.0/modules/pango-basic-x.dll
   /usr/lib/pango/1.6.0/modules/pango-basic-x.la
   /usr/lib/pango/1.6.0/modules/pango-hangul-fc.dll
@@ -93,15 +91,14 @@ Files included in the binary packages:
   /usr/lib/pango/1.6.0/modules/pango-thai-fc.la
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.dll
   /usr/lib/pango/1.6.0/modules/pango-tibetan-fc.la
-  /usr/share/doc/pango1.0-1.22.4/AUTHORS
-  /usr/share/doc/pango1.0-1.22.4/COPYING
-  /usr/share/doc/pango1.0-1.22.4/ChangeLog
-  /usr/share/doc/pango1.0-1.22.4/HACKING
-  /usr/share/doc/pango1.0-1.22.4/INSTALL
-  /usr/share/doc/pango1.0-1.22.4/MAINTAINERS
-  /usr/share/doc/pango1.0-1.22.4/NEWS
-  /usr/share/doc/pango1.0-1.22.4/README
-  /usr/share/doc/pango1.0-1.22.4/THANKS
+  /usr/share/doc/pango1.0/AUTHORS
+  /usr/share/doc/pango1.0/COPYING
+  /usr/share/doc/pango1.0/ChangeLog
+  /usr/share/doc/pango1.0/HACKING
+  /usr/share/doc/pango1.0/MAINTAINERS
+  /usr/share/doc/pango1.0/NEWS
+  /usr/share/doc/pango1.0/README
+  /usr/share/doc/pango1.0/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
 
 (libpango1.0-devel)
@@ -136,7 +133,6 @@ Files included in the binary packages:
   /usr/include/pango-1.0/pango/pangofc-font.h
   /usr/include/pango-1.0/pango/pangofc-fontmap.h
   /usr/include/pango-1.0/pango/pangoft2.h
-  /usr/include/pango-1.0/pango/pangowin32.h
   /usr/include/pango-1.0/pango/pangox.h
   /usr/include/pango-1.0/pango/pangoxft-render.h
   /usr/include/pango-1.0/pango/pangoxft.h
@@ -146,8 +142,6 @@ Files included in the binary packages:
   /usr/lib/libpangocairo-1.0.la
   /usr/lib/libpangoft2-1.0.dll.a
   /usr/lib/libpangoft2-1.0.la
-  /usr/lib/libpangowin32-1.0.dll.a
-  /usr/lib/libpangowin32-1.0.la
   /usr/lib/libpangox-1.0.dll.a
   /usr/lib/libpangox-1.0.la
   /usr/lib/libpangoxft-1.0.dll.a
@@ -155,7 +149,6 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/pango.pc
   /usr/lib/pkgconfig/pangocairo.pc
   /usr/lib/pkgconfig/pangoft2.pc
-  /usr/lib/pkgconfig/pangowin32.pc
   /usr/lib/pkgconfig/pangox.pc
   /usr/lib/pkgconfig/pangoxft.pc
   /usr/share/gtk-doc/html/pango/PangoEngineLang.html
@@ -221,54 +214,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.22.4-1 -----
-Version bump.
-
------ version 1.22.3-1 -----
-Version bump for GNOME 2.24.
-
------ version 1.20.5-1 -----
-Version bump.
-
------ version 1.20.3-1 -----
-Version bump for GNOME 2.22.
-
------ version 1.18.4-1 -----
-Version bump for GNOME 2.20.3.
-
------ version 1.18.3-1 -----
-Version bump for GNOME 2.20.
-
------ version 1.16.5-1 -----
-Version bump.
-
------ version 1.16.4-1 -----
-Version bump for GNOME 2.18.
-
------ version 1.14.10-1 -----
-Version bump with libthai support.
-
------ version 1.14.9-1 -----
-Version bump.
-
------ version 1.14.8-1 -----
-Version bump.
-
------ version 1.14.7-1 -----
-Version bump for GNOME 2.16.
-
------ version 1.12.4-1 -----
-Version bump.  Build patches included upstream.
-
------ version 1.12.3-1 -----
-Version bump.
-
------ version 1.12.2-1 -----
-Version bump for GNOME 2.14.
-
------ version 1.10.4-1 -----
-Version bump by new Cygwin maintainer.
-
+----- version 1.24.0-1 -----
+Initial release for Cygwin 1.7.
 
 Cygwin port maintained by:
 http://sourceware.org/cygwinports/

@@ -7,12 +7,12 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-45
   libcairo2-1.8.6-10
   libfontconfig1-2.6.0-10
   libfreetype6-2.3.9-1
   libgcc1-4.3.2-2
-  libglib2.0_0-2.20.0-1
+  libglib2.0_0-2.20.1-1
   libX11_6-1.2-10
   libXft2-2.1.13-10
   libXrender1-0.9.4-10
@@ -28,9 +28,9 @@ Build requirements:
   gnome-common-2.26.0-1
   gtk-doc-1.11-2
   help2man-1.36.4-10
-  libtool-2.2.6a-1
+  libtool-2.2.7a-12
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -42,16 +42,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango1.0-1.24.0-X-src.tar.bz2
+  unpack pango1.0-1.24.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango1.0-1.24.0-X.cygport all
+  cygport ./pango1.0-1.24.1-X.cygport all
 
 This will create:
-  /usr/src/libpango1.0_0-1.24.0-X.tar.bz2
-  /usr/src/libpango1.0-devel-1.24.0-X.tar.bz2
-  /usr/src/pango1.0-1.24.0-X-src.tar.bz2
+  /usr/src/libpango1.0_0-1.24.1-X.tar.bz2
+  /usr/src/libpango1.0-devel-1.24.1-X.tar.bz2
+  /usr/src/pango1.0-1.24.1-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -100,6 +100,7 @@ Files included in the binary packages:
   /usr/share/doc/pango1.0/README
   /usr/share/doc/pango1.0/THANKS
   /usr/share/man/man1/pango-querymodules.1.gz
+  /usr/share/man/man1/pango-view.1.gz
 
 (libpango1.0-devel)
   /usr/include/pango-1.0/pango/pango-attributes.h
@@ -214,8 +215,12 @@ Files included in the binary packages:
 
 Port Notes:
 
+----- version 1.24.1-1 -----
+Version bump.
+
 ----- version 1.24.0-1 -----
 Initial release for Cygwin 1.7.
+
 
 Cygwin port maintained by:
 http://sourceware.org/cygwinports/

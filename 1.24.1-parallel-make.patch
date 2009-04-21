@@ -1,0 +1,11 @@
+--- origsrc/pango-1.24.1/pango-view/Makefile.am	2009-04-21 02:08:08.733750000 -0500
++++ src/pango-1.24.1/pango-view/Makefile.am	2009-04-21 02:29:43.952500000 -0500
+@@ -89,7 +89,7 @@ MAINTAINERCLEANFILES = pango-view.1
+ dist_man_MANS = pango-view.1
+ 
+ $(srcdir)/pango-view.1: ../configure.in $(pango_view_SOURCES)
+-	$(MAKE) $(AM_MAKEFLAGS) pango-view
++	$(MAKE) $(AM_MAKEFLAGS) pango-view$(EXEEXT)
+ 	@echo "Creating $@ using help2man(1)"
+ 	@$(top_srcdir)/missing --run \
+ 	   help2man --no-info --section=1 \

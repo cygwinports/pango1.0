@@ -6,11 +6,13 @@ HOMEPAGE="http://www.pango.org/"
 
 PATCH_URI="1.20-no-undefined.patch
            1.24-no-win32.patch
+           1.24.1-parallel-make.patch
            1.24-vpath.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel"
-libpango1_0_0_CONTENTS="etc/ usr/bin/*-1.0-0.dll usr/bin/*.exe
-                      usr/lib/pango/ usr/share/doc/ usr/share/man/"
+libpango1_0_0_CONTENTS="etc/pango/ etc/postinstall/ etc/preremove/
+                        usr/bin/*-1.0-0.dll usr/bin/*.exe
+                        usr/lib/pango/ usr/share/doc/ usr/share/man/"
 libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
 
 DIFF_EXCLUDES="pango-view.1"

@@ -6,7 +6,6 @@ HOMEPAGE="http://www.pango.org/"
 
 PATCH_URI="1.20-no-undefined.patch
            1.24-no-win32.patch
-           1.24.1-parallel-make.patch
            1.24-vpath.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel"

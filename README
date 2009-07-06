@@ -42,16 +42,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango1.0-1.24.3-X-src.tar.bz2
+  unpack pango1.0-1.24.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango1.0-1.24.3-X.cygport all
+  cygport ./pango1.0-1.24.4-X.cygport all
 
 This will create:
-  /usr/src/libpango1.0_0-1.24.3-X.tar.bz2
-  /usr/src/libpango1.0-devel-1.24.3-X.tar.bz2
-  /usr/src/pango1.0-1.24.3-X-src.tar.bz2
+  /usr/src/libpango1.0_0-1.24.4-X.tar.bz2
+  /usr/src/libpango1.0-devel-1.24.4-X.tar.bz2
+  /usr/src/pango1.0-1.24.4-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -215,7 +215,7 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.24.3-1 -----
+----- version 1.24.4-1 -----
 Version bump.
 
 ----- version 1.24.2-1 -----

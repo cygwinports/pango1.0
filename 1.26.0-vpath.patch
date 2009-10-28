@@ -1,0 +1,57 @@
+--- origsrc/pango-1.26.0/pango/Makefile.am	2009-08-28 12:10:40.000000000 -0500
++++ src/pango-1.26.0/pango/Makefile.am	2009-10-25 16:35:12.239100100 -0500
+@@ -176,8 +176,8 @@ Pango-1.0.gir: $(G_IR_SCANNER) Makefile
+             --pkg freetype2 \
+ 	    -I$(top_srcdir) \
+ 	    $(PANGO_CFLAGS) \
+-            $(libpango_1_0_la_SOURCES) \
+-	    $(pango_headers) \
++	    $(addprefix $(srcdir)/,$(libpango_1_0_la_SOURCES)) \
++	    $(addprefix $(srcdir)/,$(pango_headers)) \
+  	    pango-enum-types.h
+ 
+ # ------------------- libpangox -------------------
+@@ -292,8 +292,8 @@ PangoFT2-1.0.gir: Pango-1.0.gir $(G_IR_S
+             --pkg freetype2 \
+             --pkg pangoft2 \
+ 	    -I$(top_srcdir) \
+-            $(pangoft2_headers) \
+-            $(pangoft2_public_sources)
++	    $(addprefix $(srcdir)/,$(pangoft2_headers)) \
++	    $(addprefix $(srcdir)/,$(pangoft2_public_sources))
+ 
+ # ------------------- libpangoxft -------------------
+ 
+@@ -349,8 +349,8 @@ PangoXft-1.0.gir: Pango-1.0.gir PangoFT2
+             --pkg freetype2 \
+ 	    -I$(top_srcdir) \
+ 	    $(PANGO_CFLAGS) \
+-            $(pangoxft_headers) \
+-            $(libpangoxft_1_0_la_SOURCES)
++            $(addprefix $(srcdir)/,$(pangoxft_headers)) \
++            $(addprefix $(srcdir)/,$(libpangoxft_1_0_la_SOURCES))
+ 
+ # ------------------- libpangocairo -------------------
+ 
+@@ -439,8 +439,8 @@ PangoCairo-1.0.gir: Pango-1.0.gir $(PANG
+             --pkg cairo \
+ 	    -I$(top_srcdir) \
+ 	    $(PANGO_CFLAGS) \
+-            $(libpangocairo_1_0_la_SOURCES) \
+-	    $(pangocairo_headers)
++            $(addprefix $(srcdir)/,$(libpangocairo_1_0_la_SOURCES)) \
++	    $(addprefix $(srcdir)/,$(pangocairo_headers))
+ 
+ # ------------------- libpangowin32 -------------------
+ 
+--- origsrc/pango-1.26.0/pango-view/Makefile.am	2009-08-28 12:10:40.000000000 -0500
++++ src/pango-1.26.0/pango-view/Makefile.am	2009-10-25 16:08:40.786126400 -0500
+@@ -90,7 +90,7 @@ dist_man_MANS = pango-view.1
+ 
+ $(srcdir)/pango-view.1: ../configure.in $(pango_view_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) pango-view$(EXEEXT)
+-	$(AM_V_GEN) $(top_builddir)/missing --run \
++	$(AM_V_GEN) $(top_srcdir)/missing --run \
+ 	   help2man --no-info --section=1 \
+ 		    --help-option="--help-all" --output="$@.tmp" \
+ 		    --name 'Pango text viewer' ./pango-view \

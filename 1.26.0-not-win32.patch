@@ -1,0 +1,80 @@
+--- origsrc/pango-1.24.0/configure.in	2009-03-16 18:41:13.859375000 -0500
++++ src/pango-1.24.0/configure.in	2009-03-16 19:05:49.000000000 -0500
+@@ -274,7 +274,7 @@ WIN32_CFLAGS=""
+ # The following doesn't work with autoconf-2.13, so we check $host instead
+ # AC_CHECK_LIB(gdi32, GetTextMetricsA@8, have_win32=true, : )
+ case "$host" in
+-  *-*-mingw*|*-*-cygwin*) have_win32=true ;;
++  *-*-mingw*) have_win32=true ;;
+ esac
+ 
+ 
+@@ -700,9 +700,9 @@ dnl ************************************
+ # Note that -module isn't included here since automake needs to see it to know
+ # that something like pango-arabic-fc.la is a valid libtool archive
+ #
+-LIBRARY_LIBTOOL_OPTIONS="-version-info $VERSION_INFO"
+-MODULE_LIBTOOL_OPTIONS="-export-dynamic -avoid-version"
+-if test "$pango_platform_win32" = yes; then
++LIBRARY_LIBTOOL_OPTIONS="-version-info $VERSION_INFO -no-undefined"
++MODULE_LIBTOOL_OPTIONS="-export-dynamic -avoid-version -no-undefined"
++if test "$pango_os_win32" = yes; then
+     # We currently use .def files on Windows
+     true
+     LIBRARY_LIBTOOL_OPTIONS="$LIBRARY_LIBTOOL_OPTIONS -no-undefined"
+--- origsrc/pango-1.26.0/pango/Makefile.am	2009-08-28 12:10:40.000000000 -0500
++++ src/pango-1.26.0/pango/Makefile.am	2009-10-25 16:35:12.239100100 -0500
+@@ -56,7 +56,7 @@ libpango_1_0_la_DEPENDENCIES = 		\
+ libpango_1_0_la_LIBADD += mini-fribidi/libmini-fribidi.la
+ libpango_1_0_la_DEPENDENCIES += mini-fribidi/libmini-fribidi.la
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpango_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pango.def -Wl,pango-win32-res.o
+ libpango_1_0_la_DEPENDENCIES += pango-win32-res.o pango.def
+ endif
+@@ -203,7 +203,7 @@ libpangox_1_0_la_DEPENDENCIES =			\
+ 	libpango-$(PANGO_API_VERSION).la	\
+ 	$(INCLUDED_X_MODULES)
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpangox_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangox.def -Wl,pangox-win32-res.o
+ libpangox_1_0_la_DEPENDENCIES += pangox-win32-res.o pangox.def
+ endif
+@@ -268,7 +268,7 @@ libpangoft2_1_0_la_SOURCES =   	\
+ 	pango-ot-tag.c
+ 
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpangoft2_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangoft2.def -Wl,pangoft2-win32-res.o
+ libpangoft2_1_0_la_DEPENDENCIES += pangoft2-win32-res.o pangoft2.def
+ endif
+@@ -318,7 +318,7 @@ libpangoxft_1_0_la_DEPENDENCIES =		\
+ 	libpangoft2-$(PANGO_API_VERSION).la	\
+ 	libpango-$(PANGO_API_VERSION).la
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpangoxft_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangoxft.def -Wl,pangoxft-win32-res.o
+ libpangoxft_1_0_la_DEPENDENCIES += pangoxft-win32-res.o pangoxft.def
+ endif
+@@ -378,7 +378,7 @@ libpangocairo_1_0_la_SOURCES =  \
+ 	pangocairo-private.h
+ 
+ if HAVE_CAIRO_WIN32
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpangocairo_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangocairo.def
+ libpangocairo_1_0_la_DEPENDENCIES += pangocairo.def
+ endif
+@@ -467,7 +467,7 @@ libpangowin32_1_0_la_SOURCES =	\
+ 	pangowin32-fontcache.c	\
+ 	pangowin32-fontmap.c
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ libpangowin32_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangowin32.def -Wl,pangowin32-win32-res.o
+ libpangowin32_1_0_la_DEPENDENCIES += pangowin32-win32-res.o pangowin32.def
+ endif

@@ -50,7 +50,7 @@ Build instructions:
   cygport ./pango1.0-1.26.0-X.cygport all
 
 This will create:
-  /usr/src/gobject-introspection-Pango1.0-1.26.0-X.tar.bz2
+  /usr/src/girepository-Pango1.0-1.26.0-X.tar.bz2
   /usr/src/libpango1.0_0-1.26.0-X.tar.bz2
   /usr/src/libpango1.0-devel-1.26.0-X.tar.bz2
   /usr/src/pango1.0-1.26.0-X-src.tar.bz2

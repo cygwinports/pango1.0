@@ -1,5 +1,5 @@
 category: Gnome
-requires: gobject-introspection-GLib2.0 gobject-introspection-x11 libpango1.0_0
+requires: girepository-GLib2.0 girepository-x11 libpango1.0_0
 external-source: pango1.0
 sdesc: "GNOME text layout and rendering library (GObjectIntrospection data)"
 ldesc: "Pango is a library for layout and rendering of text, with an emphasis

@@ -1,5 +1,5 @@
---- origsrc/pango-1.26.0/pango/Makefile.am	2009-08-28 12:10:40.000000000 -0500
-+++ src/pango-1.26.0/pango/Makefile.am	2009-10-25 16:35:12.239100100 -0500
+--- origsrc/pango-1.26.1/pango/Makefile.am	2009-11-18 03:28:10.611013600 -0600
++++ src/pango-1.26.1/pango/Makefile.am	2009-11-18 03:27:49.000000000 -0600
 @@ -176,8 +176,8 @@ Pango-1.0.gir: $(G_IR_SCANNER) Makefile
              --pkg freetype2 \
  	    -I$(top_srcdir) \
@@ -44,12 +44,12 @@
  
  # ------------------- libpangowin32 -------------------
  
---- origsrc/pango-1.26.0/pango-view/Makefile.am	2009-08-28 12:10:40.000000000 -0500
-+++ src/pango-1.26.0/pango-view/Makefile.am	2009-10-25 16:08:40.786126400 -0500
-@@ -90,7 +90,7 @@ dist_man_MANS = pango-view.1
- 
- $(srcdir)/pango-view.1: ../configure.in $(pango_view_SOURCES)
- 	$(MAKE) $(AM_MAKEFLAGS) pango-view$(EXEEXT)
+--- origsrc/pango-1.26.1/pango-view/Makefile.am	2009-11-18 03:28:10.611013600 -0600
++++ src/pango-1.26.1/pango-view/Makefile.am	2009-11-18 03:27:49.000000000 -0600
+@@ -93,7 +93,7 @@ nodist_man_MANS = pango-view.1
+ # The indirection through pango-view.1.in is to make parallel build work.
+ # See bug 587768.
+ $(srcdir)/pango-view.1.in: ../configure.in $(pango_view_SOURCES)
 -	$(AM_V_GEN) $(top_builddir)/missing --run \
 +	$(AM_V_GEN) $(top_srcdir)/missing --run \
  	   help2man --no-info --section=1 \

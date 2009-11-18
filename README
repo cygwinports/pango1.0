@@ -7,7 +7,7 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+-2.x.
 
 Runtime requirements:
-  cygwin-1.7.0-62
+  cygwin-1.7.0-64
   libcairo2-1.8.8-1
   libfontconfig1-2.7.3-1
   libfreetype6-2.3.11-1
@@ -20,7 +20,7 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
+  automake1.11-1.11-10
   binutils-2.19.51-1
   cygport-0.9.10-1
   gawk-3.1.7-1
@@ -43,21 +43,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack pango1.0-1.26.0-X-src.tar.bz2
+  unpack pango1.0-1.26.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pango1.0-1.26.0-X.cygport all
+  cygport ./pango1.0-1.26.1-X.cygport all
 
 This will create:
-  /usr/src/girepository-Pango1.0-1.26.0-X.tar.bz2
-  /usr/src/libpango1.0_0-1.26.0-X.tar.bz2
-  /usr/src/libpango1.0-devel-1.26.0-X.tar.bz2
-  /usr/src/pango1.0-1.26.0-X-src.tar.bz2
+  /usr/src/girepository-Pango1.0-1.26.1-X.tar.bz2
+  /usr/src/libpango1.0_0-1.26.1-X.tar.bz2
+  /usr/src/libpango1.0-devel-1.26.1-X.tar.bz2
+  /usr/src/pango1.0-1.26.1-X-src.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.26.1-1 -----
+Version bump.
 
 ----- version 1.26.0-1 -----
 Version bump for GNOME 2.28.

@@ -5,7 +5,7 @@ DESCRIPTION="GNOME text layout and rendering library"
 HOMEPAGE="http://www.pango.org/"
 
 PATCH_URI="1.26.0-not-win32.patch
-           1.26.0-vpath.patch"
+           1.26.1-vpath.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel girepository-Pango1.0"
 libpango1_0_0_CONTENTS="etc/pango/ etc/postinstall/ etc/preremove/
@@ -14,6 +14,6 @@ libpango1_0_0_CONTENTS="etc/pango/ etc/postinstall/ etc/preremove/
 libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
 girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 
-DIFF_EXCLUDES="pango-view.1"
+DIFF_EXCLUDES="pango-view.1.in"
 
 CYGCONF_ARGS="--enable-explicit-deps"

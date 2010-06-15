@@ -1,0 +1,11 @@
+--- origsrc/pango-1.28.0/pango-view/Makefile.am	2010-01-26 11:11:19.000000000 -0600
++++ src/pango-1.28.0/pango-view/Makefile.am	2010-06-15 00:16:49.126954400 -0500
+@@ -93,7 +93,7 @@ nodist_man_MANS = pango-view.1
+ # The indirection through pango-view.1.in is to make parallel build work.
+ # See bug 587768.
+ $(srcdir)/pango-view.1.in: ../configure.in $(pango_view_SOURCES)
+-	$(AM_V_GEN) $(top_builddir)/missing --run \
++	$(AM_V_GEN) $(top_srcdir)/missing --run \
+ 	   help2man --no-info --section=1 \
+ 		    --help-option="--help-all" --output="$@.tmp" \
+ 		    --name 'Pango text viewer' ./pango-view \

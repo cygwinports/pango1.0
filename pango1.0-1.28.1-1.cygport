@@ -4,8 +4,7 @@ inherit gnome2
 DESCRIPTION="GNOME text layout and rendering library"
 HOMEPAGE="http://www.pango.org/"
 
-PATCH_URI="1.26.0-not-win32.patch
-           1.28.0-vpath.patch"
+PATCH_URI="1.26.0-not-win32.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel girepository-Pango1.0"
 libpango1_0_0_CONTENTS="etc/pango/ etc/postinstall/ etc/preremove/

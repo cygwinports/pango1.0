@@ -13,5 +13,6 @@ libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/sha
 girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 
 DIFF_EXCLUDES="pango-view.1.in"
+DISTCLEANFILES="pango/*.gir"
 
 CYGCONF_ARGS="--enable-explicit-deps --with-included-modules"

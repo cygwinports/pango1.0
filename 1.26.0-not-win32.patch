@@ -66,8 +66,8 @@
  if HAVE_CAIRO_WIN32
 -if PLATFORM_WIN32
 +if OS_WIN32
- libpangocairo_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangocairo.def
- libpangocairo_1_0_la_DEPENDENCIES += pangocairo.def
+ libpangocairo_1_0_la_LDFLAGS += -export-symbols $(srcdir)/pangocairo.def -Wl,pangocairo-win32-res.o
+ libpangocairo_1_0_la_DEPENDENCIES += pangocairo-win32-res.o pangocairo.def
  endif
 @@ -467,7 +467,7 @@ libpangowin32_1_0_la_SOURCES =	\
  	pangowin32-fontcache.c	\

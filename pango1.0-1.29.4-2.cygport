@@ -19,12 +19,12 @@ DEPEND="gnome-common
 	pkgconfig(xrender)"
 
 PKG_NAMES="lib${PN}_0 lib${PN}-devel girepository-Pango1.0"
-libpango1_0_0_CONTENTS="etc/pango/ usr/bin/*-1.0-0.dll usr/bin/*.exe
-                        usr/share/doc/ usr/share/man/"
+libpango1_0_0_CONTENTS="etc/pango/ etc/postinstall/ etc/preremove/
+                        usr/bin/*-1.0-0.dll usr/bin/*.exe usr/share/doc/ usr/share/man/"
 libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
 girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 
 DIFF_EXCLUDES="pango-view.1.in"
 DISTCLEANFILES="pango/*.gir docs/*/*"
 
-CYGCONF_ARGS="--enable-explicit-deps --with-included-modules"
+CYGCONF_ARGS="--with-included-modules"

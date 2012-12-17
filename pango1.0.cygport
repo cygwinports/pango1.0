@@ -1,0 +1,40 @@
+ORIG_PN="pango"
+inherit gnome2
+
+NAME="pango1.0"
+VERSION=1.32.4
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GNOME text layout and rendering library"
+DESCRIPTION="Pango is a library for layout and rendering of text, with an emphasis
+on internationalization. Pango can be used anywhere that text layout
+is needed; however, most of the work on Pango so far has been done using
+the GTK+ widget toolkit as a test platform. Pango forms the core of text
+and font handling for GTK+."
+HOMEPAGE="http://www.pango.org/"
+
+PATCH_URI="1.26.0-not-win32.patch"
+
+DEPEND="gnome-common
+	gtk-doc
+	girepository(cairo-1.0)
+	girepository(GLib-2.0)
+	pkgconfig(cairo)
+	pkgconfig(fontconfig)
+	pkgconfig(freetype2)
+	pkgconfig(glib-2.0)
+	pkgconfig(harfbuzz)
+	pkgconfig(libthai)
+	pkgconfig(xft)
+	pkgconfig(xrender)"
+
+PKG_NAMES="lib${PN}_0 lib${PN}-devel girepository-Pango1.0"
+libpango1_0_0_CONTENTS="etc/postinstall/ etc/preremove/ usr/bin/*-1.0-0.dll
+                        usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
+
+DIFF_EXCLUDES="pango-view.1.in"
+DISTCLEANFILES="pango/*.gir docs/*/*"
+
+CYGCONF_ARGS="--without-dynamic-modules"

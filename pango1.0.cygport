@@ -37,4 +37,4 @@ girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 DIFF_EXCLUDES="pango-view.1.in"
 DISTCLEANFILES="pango/*.gir docs/*/*"
 
-CYGCONF_ARGS="--without-dynamic-modules"
+CYGCONF_ARGS="--with-included-modules=arabic-lang,basic-fc,basic-win32,basic-coretext,indic-lang,thai-lang"

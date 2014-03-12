@@ -2,7 +2,7 @@ ORIG_PN="pango"
 inherit gnome2
 
 NAME="pango1.0"
-VERSION=1.34.1
+VERSION=1.36.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME text layout and rendering library"
@@ -28,10 +28,12 @@ DEPEND="gnome-common
 	pkgconfig(xft)
 	pkgconfig(xrender)"
 
-PKG_NAMES="lib${NAME}_0 lib${NAME}-devel girepository-Pango1.0"
+PKG_NAMES="lib${NAME}_0 lib${NAME}-devel lib${NAME}-doc girepository-Pango1.0"
 libpango1_0_0_CONTENTS="etc/postinstall/ etc/preremove/ usr/bin/*-1.0-0.dll
                         usr/bin/*.exe usr/share/doc/ usr/share/man/"
-libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
+libpango1_0_doc_CATEGORY="Doc"
+libpango1_0_doc_CONTENTS="usr/share/gtk-doc/"
 girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 
 DIFF_EXCLUDES="pango-view.1.in"

@@ -2,7 +2,7 @@ ORIG_PN="pango"
 inherit gnome2
 
 NAME="pango1.0"
-VERSION=1.36.8
+VERSION=1.38.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME text layout and rendering library"
@@ -13,7 +13,7 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+."
 HOMEPAGE="http://www.pango.org/"
 
-PATCH_URI="1.26.0-not-win32.patch"
+PATCH_URI="1.38.1-not-win32.patch"
 
 DEPEND="gnome-common
 	gtk-doc
@@ -29,8 +29,8 @@ DEPEND="gnome-common
 	pkgconfig(xrender)"
 
 PKG_NAMES="lib${NAME}_0 lib${NAME}-devel lib${NAME}-doc girepository-Pango1.0"
-libpango1_0_0_CONTENTS="etc/postinstall/ etc/preremove/ usr/bin/*-1.0-0.dll
-                        usr/bin/*.exe usr/lib/pango/ usr/share/doc/ usr/share/man/"
+libpango1_0_0_CONTENTS="usr/bin/*-1.0-0.dll usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libpango1_0_devel_REQUIRES="girepository-Pango1.0"
 libpango1_0_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/'
 libpango1_0_doc_CATEGORY="Doc"
 libpango1_0_doc_CONTENTS="usr/share/gtk-doc/"
@@ -38,5 +38,3 @@ girepository_Pango1_0_CONTENTS="usr/*/gir*-1.0/"
 
 DIFF_EXCLUDES="pango-view.1.in"
 DISTCLEANFILES="pango/*.gir docs/*/*"
-
-CYGCONF_ARGS="--with-included-modules=basic-fc"

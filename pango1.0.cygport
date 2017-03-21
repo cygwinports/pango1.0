@@ -2,7 +2,7 @@ ORIG_PN="pango"
 inherit gnome2
 
 NAME="pango1.0"
-VERSION=1.38.1
+VERSION=1.40.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME text layout and rendering library"
@@ -13,7 +13,7 @@ the GTK+ widget toolkit as a test platform. Pango forms the core of text
 and font handling for GTK+."
 HOMEPAGE="http://www.pango.org/"
 
-PATCH_URI="1.38.1-not-win32.patch"
+PATCH_URI="1.40.4-not-win32.patch"
 
 DEPEND="gnome-common
 	gtk-doc
